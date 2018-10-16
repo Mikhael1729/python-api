@@ -2,6 +2,11 @@
 
 {% block content %}
     <h1>Welcome {{ user.username}} </h1>
+    <p>
+        Hello, World! This is my first template, and there are <b>{{ ngames }}</b> games in the database.
+    </p>
+    
+    <br />
 
     <ul>
     {% for g in games %}
@@ -10,7 +15,4 @@
     {% endfor %}
     </ul>
 
-    <p>
-        Hello, World! This is my first template, and there are <b>{{ ngames }}</b> games in the database.
-    </p>
 {% endblock %}
