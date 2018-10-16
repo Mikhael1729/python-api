@@ -5,7 +5,17 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>Welcome {{ user.username}} </h1>
+
+    <ul>
+    {% for g in games %}
+        <li>Game {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }}</li>
+
+    {% endfor %}
+    </ul>
+
     <p>
-        Hello, World! This is my first template.
+        Hello, World! This is my first template, and there are <b>{{ ngames }}</b> games in the database.
     </p>
+</body>
+</html>
