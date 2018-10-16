@@ -1,13 +1,6 @@
-{% load staticfiles %}
+{% extends "base.html" %}
 
-<!DOCTYP html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link href="{% static 'player/style.css' %}" rel="stylesheet"> 
-</head>
-<body>
+{% block content %}
     <h1>Welcome {{ user.username}} </h1>
 
     <ul>
@@ -20,5 +13,4 @@
     <p>
         Hello, World! This is my first template, and there are <b>{{ ngames }}</b> games in the database.
     </p>
-</body>
-</html>
+{% endblock %}
